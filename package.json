@@ -1,5 +1,5 @@
 {
-  "name": "@kolkov/angular-editor",
+  "name": "@johannespeltola/angular-editor",
   "version": "1.1.8",
   "scripts": {
     "ng": "ng",
@@ -19,7 +19,7 @@
     "copy:license": "cpx LICENSE dist/angular-editor",
     "test-ci": "ng test angular-editor --code-coverage --watch=false --browsers=ChromeHeadless && cat ./coverage/angular-editor/lcov.info | coveralls"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/animations": "^12.0.0",
     "@angular/common": "^12.0.0",
@@ -54,8 +54,23 @@
     "karma-jasmine-html-reporter": "^1.5.0",
     "ng-packagr": "^12.0.0",
     "protractor": "~7.0.0",
-    "ts-node": "~8.5.0",
+    "ts-node": "~8.5",
     "tslint": "~6.1.0",
     "typescript": "~4.2.4"
-  }
+  },
+  "description": "<p align=\"center\">\r   <img width=\"150px\" src=\"https://raw.githubusercontent.com/kolkov/angular-editor/master/docs/angular-editor-logo.png?raw=true\" alt=\"AngularEditor logo\"/>\r </p>",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johannespeltola/angular-editor.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/johannespeltola/angular-editor/issues"
+  },
+  "homepage": "https://github.com/johannespeltola/angular-editor#readme"
 }
