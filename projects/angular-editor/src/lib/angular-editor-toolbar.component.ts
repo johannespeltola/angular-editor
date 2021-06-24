@@ -318,7 +318,7 @@ export class AngularEditorToolbarComponent {
     const file = event.target.files[0];
     if (file.type.includes('image/')) {
         if (this.upload) {
-          this.upload(file).subscribe((response) => this.watchUploadImage(response, event))
+          this.upload(file).subscribe((response: HttpResponse<UploadResponse>) => this.watchUploadImage(response, event))
         } else if (this.uploadUrl) {
             this.editorService.uploadImage(file).subscribe(() => this.watchUploadImage);
         } else {
@@ -332,9 +332,9 @@ export class AngularEditorToolbarComponent {
       }
   }
 
-  watchUploadImage(response: HttpResponse<{url: string}>, event) {
-    const { url } = response.body;
-    this.editorService.insertImage(url);
+  watchUploadImage(response: HttpResponse<{imageUrl: string}>, event) {
+    const { imageUrl } = response.body;
+    this.editorService.insertImage(imageUrl);
     event.srcElement.value = null;
   }
 
